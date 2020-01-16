@@ -1,0 +1,86 @@
+/* Carousel */
+
+#main {
+  #presentation {
+
+    .carousel-slider {
+      border-radius: 2%;
+      margin: 2em 0;
+
+      button {
+
+        &.control-arrow {
+          padding: 2.5em;
+          border-left-color: transparent;
+          box-shadow: none;
+          //background-color: #FF0000;
+
+          &.control-prev {
+            width: 20%;
+
+            &:before {
+              border: none;
+              //content: url('../images/slides/prev-arrow.svg');
+              //transform: scale(.3);
+              //position: relative;
+              //left: -7em;
+              //top:0;
+            }
+          }
+
+          &.control-next {
+            width: 20%;
+
+            &:before {
+              border: none;
+              //content: url('../images/slides/next-arrow.svg');
+              //transform: scale(.3);
+              //position: relative;
+              //right: -7em;
+              //top:0;
+            }
+          }
+        }
+      }
+
+      ul {
+        li {
+          padding: 0;
+        }
+
+        &.control-dots {
+          .dot {
+            height: 0.25em;
+            width: 3em;
+            border-radius: 15%
+          }
+        }
+      }
+
+      @include breakpoint(small) {
+        ul {
+          &.control-dots {
+            .dot {
+              display:none;
+              //height: 0.25em;
+              //width: 1.5em;
+              //border-radius: 15%
+            }
+          }
+        }
+
+        button {
+          &.control-arrow {
+            &.control-prev {
+              width: 50%;
+            }
+
+            &.control-next {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

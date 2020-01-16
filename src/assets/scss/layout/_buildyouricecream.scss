@@ -1,0 +1,127 @@
+/* BuildYourIceCream */
+
+#generateIceCream {
+  margin: 0 0 3em 0;
+
+  @include breakpoint(small) {
+    margin: 0 0 1em 0;
+  }
+}
+
+.icb {
+  text-align: center;
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0.1em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  #icb-container {
+    position: relative;
+    margin: auto;
+    width: 18em;
+    height: 37em;
+
+    .flavour {
+      text-align: right;
+      position: absolute;
+      width: 10em;
+
+    }
+
+    .flavour1 {
+      top: 18em;
+      left: -12em;
+    }
+
+    .flavour2 {
+      text-align: left;
+      top: 10em;
+      left: 21em;
+    }
+
+    .flavour3 {
+      top: 6em;
+      left: -12em;
+    }
+
+    .level {
+      width: inherit;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .level0 {
+      z-index: 1;
+    }
+
+    .level1 {
+      z-index: 2;
+    }
+
+    .level2 {
+      z-index: 3;
+    }
+
+    .level3 {
+      z-index: 4;
+    }
+
+    .level4 {
+      z-index: 5;
+    }
+
+    .level5 {
+      z-index: 6;
+    }
+  }
+
+  #icb-flavour-inlines {
+    .flavour {
+      width: calc(33.3%);
+      display: none;
+    }
+  }
+
+  @include breakpoint(small) {
+    #icb-container {
+      .flavour {
+        display: none;
+      }
+    }
+
+    #icb-flavour-inlines {
+      .flavour {
+        display: table-cell;
+      }
+    }
+  }
+
+  @include breakpoint(xsmall) {
+    #icb-container {
+      .flavour {
+        display: none;
+      }
+    }
+
+    #icb-flavour-inlines {
+      .flavour {
+        display: inline-block;
+        margin: auto;
+        vertical-align: middle;
+        margin-bottom: 2em;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+}
