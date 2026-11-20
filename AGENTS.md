@@ -40,3 +40,7 @@ Versionare `package-lock.json` insieme alle modifiche delle dipendenze. Non aggi
 ## Verifiche
 
 Non esiste una suite di test configurata: lo script `test` è un segnaposto. Per modifiche applicative, eseguire `npm.cmd run build` e controllare le pagine coinvolte. Per modifiche solo documentali, controllare che percorsi e comandi corrispondano alla repository. Segnalare gli avvisi o i limiti rilevanti senza modificare contenuti o dipendenze estranei al task.
+
+## Feed prodotti
+
+Il catalogo statico è in `feeds/catalog.json`; `npm.cmd run feeds:generate` produce tre bozze in `feeds/drafts/` e un report in `feeds/readiness.json`. Leggere `feeds/README.md` prima di modificarle. Non inventare prezzi, disponibilità o identificativi. Non copiare le bozze in `static/` finché mancano i dati commerciali; per OpenAI confermare il supporto a Italia/EUR, dato che il percorso standard documentato è USA. Gli ID interni non devono cambiare quando cambiano prezzi o titoli.

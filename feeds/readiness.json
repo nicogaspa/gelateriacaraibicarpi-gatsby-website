@@ -1,0 +1,289 @@
+{
+  "checked_on": "2026-11-20",
+  "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/",
+  "product_count": 13,
+  "ready_for_submission": false,
+  "scope": "Bozze Google online, Meta prodotti e OpenAI discovery; non coprono checkout o inventario locale.",
+  "global_blockers": [
+    "Definire vendita online oppure solo prenotazione e ritiro; per Google offline valutare feed prodotti e inventario locale.",
+    "Pubblicare pagine per singolo prodotto con prezzo, unità di vendita e disponibilità coerenti.",
+    "Confermare le varianti della torta personalizzata e delle confezioni di pasticcini.",
+    "OpenAI: il percorso standard è USA; ottenere conferma di supporto a IT/EUR e completare onboarding merchant.",
+    "Confermare GTIN/MPN oppure la loro effettiva assenza; non usare ID interni come codici del produttore."
+  ],
+  "products": [
+    {
+      "id": "caraibi-torta-personalizzata",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-pasticcini",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-cremino",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-gianduia-stracciatella",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-mascarpone",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-cookies",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-pino",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-torta-catalana",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-rocher",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-profitterol",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-cheesecake",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-zuppa-inglese",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-stracchino-duchessa",
+      "google_missing": [
+        "link",
+        "availability",
+        "price"
+      ],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    }
+  ]
+}

@@ -69,3 +69,7 @@ Lo stack è stato aggiornato da Gatsby 2 / React 16 a Gatsby 5 / React 18, segue
 Le immagini dinamiche del generatore usano l’export `default` dei moduli Webpack 5. `smoothscroll-polyfill` e `prop-types`, già importati dai componenti, sono dichiarati come dipendenze dirette.
 
 La compilazione può segnalare avvisi di deprecazione SCSS e React Helmet, e il server di sviluppo segnala avvisi di accessibilità del markup esistente. Su Windows, le dipendenze Gatsby possono inoltre tentare di invocare `WMIC`, assente nelle versioni recenti del sistema: durante la verifica questo avviso non ha impedito la build.
+
+## Feed prodotti
+
+Le specifiche verificate, le tre bozze statiche e i dati mancanti sono descritti in [feeds/README.md](feeds/README.md). Rigenerare con `npm.cmd run feeds:generate`. Le bozze non sono pubblicate: occorrono prezzi, disponibilità, pagine prodotto e conferma dei canali/mercati.
