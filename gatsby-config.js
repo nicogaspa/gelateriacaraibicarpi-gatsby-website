@@ -25,7 +25,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.gelateriacaraibicarpi.it',
-        sitemap: 'https://www.gelateriacaraibicarpi.it/sitemap.xml',
+        sitemap: 'https://www.gelateriacaraibicarpi.it/sitemap-index.xml',
         policy: [{userAgent: '*', allow: '/'}],
         output: '/robots.txt'
       }
@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
-        exclude: []
+        output: `/`,
+        excludes: []
       }
     },
     {

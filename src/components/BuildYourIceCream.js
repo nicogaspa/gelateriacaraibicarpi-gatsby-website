@@ -121,9 +121,10 @@ class BuildYourIceCream extends React.Component {
   render() {
 
     let randoms = this.props.randICB
-    const level1 = require('../assets/images/buildyouricecream/1_' + randoms[0] + '-min.png')
-    const level2 = require('../assets/images/buildyouricecream/2_' + randoms[1] + '-min.png')
-    const level3 = require('../assets/images/buildyouricecream/3_' + randoms[2] + '-min.png')
+    // Webpack 5 espone gli asset caricati con require come moduli: src richiede l'URL di default.
+    const level1 = require('../assets/images/buildyouricecream/1_' + randoms[0] + '-min.png').default
+    const level2 = require('../assets/images/buildyouricecream/2_' + randoms[1] + '-min.png').default
+    const level3 = require('../assets/images/buildyouricecream/3_' + randoms[2] + '-min.png').default
     const title1 = this.flavours[randoms[0]].title
     const desc1 = this.flavours[randoms[0]].desc
     const title2 = this.flavours[randoms[1]].title
