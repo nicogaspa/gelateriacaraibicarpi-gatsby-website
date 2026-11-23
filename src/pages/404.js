@@ -1,25 +1,37 @@
 import React from 'react'
 import Layout from '../components/layout'
-import img_404 from '../assets/images/404_sad.png'
-import Helmet from "react-helmet";
+import OptimizedImage from '../components/OptimizedImage'
+import { Link } from 'gatsby'
+import Seo from '../components/Seo'
 
 const NotFoundPage = () => (
   <Layout>
-    <Helmet title="Gelateria Caraibi - 404">
-      <meta charSet="utf-8"/>
-      <meta name="language" content="IT"/>
-      <meta name="description" content="Gelateria Caraibi è a Carpi, in via Nuova Ponente 5F, I migliori gelati,
-          semifreddi e torte artigianali, da più di 30 anni. Tel: 059641442"/>
-      <meta name="keywords" content="gelateria,caraibi,gasparini massimo,gelato,gelati,carpi,nuova ponente,
-          coppa,cono gelato,coni gelato,torta gelato,torta,torte,semifreddi,semifreddo,gusti gelato,gusto,
-           cialda,ice cream,granite,granita,dolci,dolce"/>
-      <html lang="it"/>
-    </Helmet>
-    <header id="header">
-      <h1>404 - Non trovato</h1>
-      <img src={img_404} alt="404 not found"/>
-      <p id="not-found">Questa pagina non esiste <span role="img" aria-label="sad face">😢</span></p>
-    </header>
+    <Seo
+      title="Pagina non trovata | Gelateria Caraibi Carpi"
+      description="La pagina richiesta non esiste. Torna alla homepage della Gelateria Caraibi a Carpi."
+      pathname="/404/"
+      noindex
+    />
+    <main id="main">
+      <section className="main">
+        <h1>404 - Non trovato</h1>
+        <OptimizedImage
+          image="404_sad"
+          alt="404 not found"
+          sizes="240px"
+          loading="eager"
+        />
+        <p id="not-found">
+          Questa pagina non esiste{' '}
+          <span role="img" aria-label="sad face">
+            😢
+          </span>
+        </p>
+        <p>
+          <Link to="/">Torna alla homepage</Link>
+        </p>
+      </section>
+    </main>
   </Layout>
 )
 

@@ -35,10 +35,13 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "feeds:generate": "node scripts/generate-product-feeds.cjs"
+    "feeds:generate": "node scripts/generate-product-feeds.cjs",
+    "postbuild": "node scripts/create-sitemap-alias.cjs",
+    "prebuild": "node scripts/generate-product-feeds.cjs"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "sharp": "0.32.6"
   },
   "engines": {
     "node": ">=24.13.0 <25",

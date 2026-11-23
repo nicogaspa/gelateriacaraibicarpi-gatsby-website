@@ -1,11 +1,18 @@
 import React from 'react'
-import logo from "../assets/images/logo.png";
-import {Link} from "gatsby";
+import { Link } from 'gatsby'
+import OptimizedImage from './OptimizedImage'
 
-const Header = (props) => (
+const Header = () => (
   <header id="header">
-    <Link to="/">
-      <img src={logo} alt="logo gelateria caraibi" id="logo-img"/>
+    <Link to="/" aria-label="Gelateria Caraibi, homepage">
+      <OptimizedImage
+        image="logo"
+        alt="Gelateria Caraibi Carpi"
+        id="logo-img"
+        sizes="(max-width: 736px) 80vw, 480px"
+        loading="eager"
+        priority="high"
+      />
     </Link>
   </header>
 )

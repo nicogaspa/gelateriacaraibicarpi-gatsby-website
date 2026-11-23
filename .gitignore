@@ -10,3 +10,6 @@ yarn.lock
 .DS_Store
 # Strumenti e log locali
 .tools/
+# Manifest immagini generato automaticamente in build
+/src/generated/
+/ftp_credentials.json

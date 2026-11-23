@@ -1,59 +1,59 @@
-# Feed prodotti: requisiti e stato
+# Cataloghi per vendita locale e ritiro
 
-Verifica del 20 novembre 2026. Sono state generate **bozze**, non feed approvati o pronti per essere inviati. I campi commerciali mancanti restano vuoti/null; non sono stati inventati prezzi, disponibilità, codici GTIN o MPN.
+Configurazione confermata dall'utente il 20 novembre 2026: **vendita esclusivamente locale, solo ritiro in gelateria, nessuna consegna e nessun acquisto online**. Prezzo e disponibilità sono omessi completamente dai tre export: non sono presenti colonne vuote, valori null, zero o disponibilità presunte per questi campi.
 
-## File e aggiornamento
+## File e generazione
 
-- `feeds/catalog.json`: snapshot statico modificabile dei prodotti del sito pubblico, con dati commerciali da completare.
-- `feeds/drafts/google-products.tsv`: bozza Google Merchant Center per offerte online.
-- `feeds/drafts/meta-products.csv`: bozza catalogo prodotti Meta.
-- `feeds/drafts/openai-products.jsonl`: bozza schema OpenAI discovery.
-- `feeds/readiness.json`: campi mancanti per piattaforma e problemi comuni.
-- `scripts/generate-product-feeds.cjs`: rigenera le bozze dal catalogo senza database o richieste di rete.
+- `feeds/catalog.json`: 12 prodotti nella repository, ID stabili, immagini e configurazione `sales`.
+- `static/feeds/google-products.tsv`: anagrafica prodotti locali Google; intestazioni TSV con spazi, secondo la specifica locale.
+- `static/feeds/meta-products.csv`: catalogo descrittivo Meta senza prezzo/disponibilità, non conforme per l'invio.
+- `static/feeds/openai-products.jsonl`: catalogo descrittivo OpenAI senza prezzo/disponibilità, non conforme per l'invio; search e Ads restano disabilitati.
+- `feeds/readiness.json`: requisiti mancanti e stato distinto per piattaforma.
 
 ```powershell
 npm.cmd run feeds:generate
 ```
 
-Gli ID assegnati sono interni e devono restare stabili. Non sono SKU originali, GTIN o MPN. Nomi e descrizioni sono quelli del sito; i tag HTML sono rimossi e le interruzioni di riga diventano spazi. `condition=new` descrive prodotti artigianali nuovi. EUR e IT rappresentano il contesto italiano del negozio, senza implicare supporto del mercato OpenAI.
+Il generatore funziona senza database o richieste di rete e non aggiunge automaticamente i campi esclusi. Le descrizioni degli export precisano vendita locale e ritiro; la descrizione originale è conservata nel catalogo sorgente. Gli ID sono interni, non GTIN o MPN. La categoria `5788` (Frozen Desserts & Novelties) è una classificazione derivata dalla [tassonomia Google](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt).
 
-La categoria assegnata, `5788` (Frozen Desserts & Novelties), è una classificazione ricavata dal tipo di prodotto, non un dato pubblicato dalla gelateria. È tratta dalla [tassonomia ufficiale Google](https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt).
+## Google: prodotti locali e inventario sono due livelli distinti
 
-## Google Merchant Center
+La [specifica prodotti locali](https://support.google.com/merchants/answer/14779112?hl=en) richiede nell'anagrafica `id`, `title`, `description`, `image_link` e il brand pertinente; gli identificativi GTIN/MPN dipendono dal prodotto. Prezzo e disponibilità non sono inseriti in questo export di anagrafica. Il link alla pagina prodotto è condizionato al tipo di vetrina scelto: non sono inventate pagine individuali. Le intestazioni del TSV locale usano spazi, per esempio `image link`.
 
-Per un feed di prodotti online, i campi di base sono `id`, `title`, `description`, `link`, `image_link`, `availability`, `price` e il brand pertinente. `condition` è obbligatorio per usato/ricondizionato; qui è valorizzato `new`. GTIN e MPN dipendono dagli identificativi assegnati al prodotto: non inventarli. Usare `identifier_exists=no` soltanto dopo aver confermato l'effettiva assenza di identificativi applicabili. Fonte: [specifica prodotti Google](https://support.google.com/merchants/answer/7052112?hl=en).
+Questo file **non è sufficiente da solo per attivare la visibilità locale**. Occorre configurare il programma locale in Merchant Center e collegare il negozio al Profilo dell'attività. La [specifica inventario locale](https://support.google.com/merchants/answer/14819809?hl=en) richiede almeno `id`, `store_code` e `availability`; il prezzo è opzionale in quel feed e può dipendere dalla configurazione e dagli altri dati forniti. Non viene generato un inventario senza disponibilità e non si presume stock positivo. La scelta di omettere la disponibilità impedisce quindi di completare il percorso inventario locale con i soli file qui presenti.
 
-Prezzo e disponibilità devono corrispondere alla pagina e al checkout; la valuta va inclusa, per esempio nel formato `25.00 EUR` (solo esempio di sintassi). Per offerte online italiane servono costi e condizioni di spedizione configurati nel feed oppure nell'account. Non inserire una spedizione gratuita presunta. Le varianti acquistabili devono avere righe e prezzi propri. Il sito attuale consente il contatto telefonico, senza checkout: il solo feed non rende il sito idoneo alle offerte Shopping online. Fonte: [requisiti checkout](https://support.google.com/merchants/answer/9158778?hl=en).
+La modalità di ritiro va configurata secondo le funzionalità realmente offerte: non sono dichiarati acquisto online, riserva online, tempi di preparazione o un `pickup_method` non verificati. Per lo stesso motivo non è inserita una consegna gratuita. Attivare solo le destinazioni locali coerenti con la vendita in negozio, non le offerte Shopping online.
 
-Se la vendita è esclusivamente in gelateria, valutare invece [prodotti locali](https://support.google.com/merchants/answer/14779112?hl=en) e [inventario locale](https://support.google.com/merchants/answer/14819809?hl=en): occorrono configurazione del negozio, collegamento al Business Profile e dati di prezzo/disponibilità per negozio. Questa bozza non è un feed inventario locale; non sostituire il modello senza confermare il canale di vendita.
+## Meta: il ritiro non elimina i campi obbligatori
 
-## Meta
+La [specifica cataloghi Meta](https://developers.facebook.com/documentation/ads-commerce/catalog/reference) richiede prezzo e disponibilità anche per il catalogo prodotti usato con vendita locale. L'export richiesto dall'utente li omette ed è quindi **una bozza descrittiva incompleta**, non un feed conforme. Il report continua a segnalarli come requisiti mancanti: la loro rimozione non viene interpretata come disponibilità o prezzo zero.
 
-Il minimo per il caricamento comprende `id`, `title`, `description`, `availability`, `condition`, `price`, `link`, `image_link` e almeno uno fra `brand`, `gtin`, `mpn`. La tabella attuale classifica inoltre come richiesti `brand`, una fra `google_product_category` e `fb_product_category`, e `additional_image_link`, distinguendoli dai campi che bloccano materialmente il caricamento. Le bozze includono queste colonne; le immagini aggiuntive restano vuote perché non disponibili. Non duplicare la foto principale per simulare fotografie ulteriori. Fonte: [riferimento ufficiale cataloghi Meta](https://developers.facebook.com/documentation/ads-commerce/catalog/reference).
+Sono conservati ID, titolo, descrizione, brand, condizione, immagine e categoria. Il sito non dispone di pagine per singolo prodotto né di fotografie aggiuntive: questi restano ulteriori limiti. Le foto principali verificate sono PNG 1000×657 pixel, inferiori a 8 MB. Non vengono duplicate per simulare altre immagini.
 
-Disponibilità: `in stock` o `out of stock`; prezzi con punto decimale e valuta ISO. Il link deve riferirsi al prodotto specifico sul dominio del negozio. Le foto principali pubblicate sono PNG, 1000×657 pixel e inferiori a 8 MB; superano il requisito dimensionale minimo di 500×500. Questa verifica tecnica non equivale ad approvazione creativa o commerciale. Ulteriori campi dipendono da varianti, mercato e checkout; non dichiarare ingredienti, allergeni, certificazioni o caratteristiche non verificate.
+## OpenAI: catalogo descrittivo incompleto
 
-## OpenAI
+Lo [schema discovery stabile](https://developers.openai.com/commerce/specs/file-upload/products?fields=required&version=currently-stable&view=table) richiede prezzo e disponibilità. Per rispettare la scelta dell'utente sono assenti anche le chiavi JSON: non viene usato il precedente `availability=unknown`. Restano omessi i link prodotto non disponibili; `is_eligible_search` e `is_ads_eligible` sono `false`.
 
-La specifica stabile discovery richiede **11 campi**: `item_id`, `title`, `description`, `url`, `brand`, `seller_name`, `image_url`, `availability`, `price`, `target_countries`, `store_country`. Non usare elenchi di campi provenienti da vecchie versioni della specifica. `availability=unknown` è ammesso esplicitamente e non dichiara il prodotto disponibile. Il prezzo rimane obbligatorio; qui è `null`, quindi le righe sono incomplete. Fonte: [schema ufficiale prodotti](https://developers.openai.com/commerce/specs/file-upload/products?fields=required&version=currently-stable&view=table).
+Il mercato reale rimane IT, senza sostituirlo con US. Il percorso standard di upload documentato è USA: il supporto Italia/EUR va confermato con OpenAI e richiede onboarding merchant. Vendita locale e ritiro non rimuovono questi requisiti. Per l'invio futuro consultare anche la [guida di consegna](https://developers.openai.com/commerce/guides/submit-product-feeds).
 
-Il percorso standard di upload è attualmente USA. Impostare IT/EUR non abilita il mercato italiano: ottenere conferma da OpenAI per l'integrazione e i paesi/valute consentiti. Non sostituire i dati reali con US/USD. La bozza resta disabilitata per search e Ads. Varianti richiedono `group_id`, `listing_has_variations` e `variant_dict`; Ads richiede l'abilitazione pertinente e checkout è un'integrazione separata.
+## Informazioni confermate e questioni aperte
 
-La consegna può avvenire tramite URL HTTPS ospitato, upload manuale o SFTP nel percorso merchant, dopo verifica dell'identità e configurazione del business. Pubblicare semplicemente un file non completa l'onboarding e non garantisce visibilità. Fonte: [invio feed OpenAI](https://developers.openai.com/commerce/guides/submit-product-feeds).
+La modalità di vendita è confermata: non occorre richiederla di nuovo. Non richiedere prezzi e disponibilità come semplice completamento di questi export: la loro esclusione è intenzionale. Segnalare invece che per attivare specifici canali occorrerebbe cambiare questa scelta o usare un percorso diverso, da concordare.
 
-## Dati da completare
+Restano da verificare gli identificativi realmente assegnati e le varianti delle torte/confezioni. I campi `identifiers_absent_confirmed` e `sale_unit_confirmed` non sono automaticamente impostati a true. Non usare `identifier_exists=no` senza conferma.
 
-1. Canale di vendita: solo prenotazione/ritiro oppure e-commerce; eventuali condizioni e zone di consegna.
-2. Prezzo IVA inclusa per unità acquistabile, formato/confezione e varianti. Il sito descrive torte personalizzate con più porzioni e pasticcini in scatole diverse: non è possibile assegnare un unico prezzo senza definire l'offerta.
-3. Disponibilità aggiornata per articolo; tempi di preparazione per gli ordini su richiesta.
-4. URL della pagina del singolo prodotto con prezzo e disponibilità visibili. Nel sito pubblico esiste soltanto la pagina di catalogo: i link nelle bozze sono quindi vuoti, anziché fingere pagine inesistenti.
-5. GTIN/MPN effettivi o conferma che non siano stati assegnati; ulteriori fotografie per Meta.
-6. Onboarding e conferma geografica OpenAI.
+## Sito pubblico, repository e hosting
 
-## Differenza tra sito pubblico e repository
+Il catalogo locale contiene 12 prodotti, mostrati anche nella pagina prodotti della repository. Gli URL delle immagini puntano al sito attuale: prima di sostituirlo trasferire gli asset e aggiornare gli URL, usando gli asset locali e le varianti statiche generate in build.
 
-Lo snapshot contiene 13 prodotti, mentre `src/pages/prodotti.js` ne contiene 12. Il sito pubblico include anche **Pi-No, Pistacchio e Nocciola**; non è stato aggiunto autonomamente alle pagine della repository. Gli URL delle immagini puntano al sito attualmente pubblico e sono stati verificati via HTTP. Prima di sostituire il sito, trasferire gli asset necessari e aggiornare gli URL: una nuova build potrebbe eliminare i vecchi nomi hash, e l'immagine Pi-No non è presente nella copia locale.
+I tre file sono pubblicati per richiesta esplicita dell’utente del 21 novembre 2026, senza prezzo e disponibilità. Il generatore scrive in `static/feeds/`; Gatsby li copia in `public/feeds/` durante la build. `npm.cmd run build` li rigenera prima della compilazione tramite `prebuild`.
 
-## Hosting successivo
+- Google: https://www.gelateriacaraibicarpi.it/feeds/google-products.tsv
+- Meta: https://www.gelateriacaraibicarpi.it/feeds/meta-products.csv
+- OpenAI: https://www.gelateriacaraibicarpi.it/feeds/openai-products.jsonl
 
-Le bozze sono fuori da `static/`: non vengono pubblicate con Gatsby. Dopo il completamento e la validazione dei dati, i file definitivi possono essere copiati in `static/feeds/`, da cui Gatsby li pubblicherà come `/feeds/google-products.tsv`, `/feeds/meta-products.csv` e `/feeds/openai-products.jsonl`. Questi sono percorsi previsti, non endpoint già disponibili o registrati nelle piattaforme. Non pubblicare le bozze incomplete. Per OpenAI resta necessaria la conferma del mercato anche con tutti i campi compilati.
+La pubblicazione rende i file scaricabili ma non li registra presso le piattaforme e non cambia i requisiti mancanti documentati in `feeds/readiness.json`. Il catalogo sorgente, il report e le credenziali FTP restano fuori da `static/` e dalla pubblicazione. `static/web.config` configura i MIME necessari a IIS per JSONL, TSV e CSV.
+
+## Approvazione Pistacchio Nocciola
+
+L’utente ha approvato foto scontornata e scheda Pistacchio Nocciola (6 porzioni) il 21 novembre 2026, autorizzando la pubblicazione su sito e feed. Il catalogo comprende 12 prodotti e il campo interno `publication_status` della torta è `approved`.

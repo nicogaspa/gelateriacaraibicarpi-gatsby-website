@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Gelateria Caraibi",
     author: "Nicolò Gasparini",
-    description: "Gelateria Caraibi è a Carpi, in via Nuova Ponente 5F, I migliori gelati, semifreddi e torte artigianali, da più di 30 anni. Tel: 059641442",
+    description: "Gelateria artigianale a Carpi dal 1987, con ingredienti genuini, semifreddi e torte personalizzate. Prenotazioni anche per aziende e solo ritiro in gelateria.",
     siteUrl: "https://www.gelateriacaraibicarpi.it",
     themeColor: "#d21a2e",
     keywords: "gelateria caraibi gasparini massimo gelato carpi nuova ponente coppa cono torta torte semifreddi semifreddo gelati limone pistacchio nocciola crema riso latte granite bibite dolci dolce"
@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/`,
-        excludes: []
+        excludes: ['/404/', '/404.html', '/offline-plugin-app-shell-fallback/']
       }
     },
     {

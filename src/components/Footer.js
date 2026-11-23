@@ -1,40 +1,68 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import Hours from './Hours'
 // import CookieConsent from "react-cookie-consent";
 
 const Footer = props => (
   <footer id="footer">
     <section>
       <h2>Gelateria Caraibi</h2>
-      <p>
-        di Gasparini Massimo e Pivetti Marzia
-      </p>
+      <p>di Gasparini Massimo e Pivetti Marzia</p>
       <ul className="icons">
         <li>
-          <a href="https://www.facebook.com/GelateriaCaraibiCarpi/" className="icon fa-facebook alt">
+          <a
+            href="https://www.facebook.com/GelateriaCaraibiCarpi/"
+            className="icon fa-facebook alt"
+            aria-label="Facebook Gelateria Caraibi"
+          >
             <span className="label">Facebook</span>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/gelateriacaraibicarpi/" className="icon fa-instagram alt">
+          <a
+            href="https://www.instagram.com/gelateriacaraibicarpi/"
+            className="icon fa-instagram alt"
+            aria-label="Instagram Gelateria Caraibi"
+          >
             <span className="label">Instagram</span>
           </a>
         </li>
       </ul>
     </section>
     <section>
+      <Hours />
+      <p>
+        <Link to="/faq/">Domande frequenti</Link> ·{' '}
+        <Link to="/torte-gelato-carpi/">Torte personalizzate</Link>
+      </p>
       <dl className="alt">
         <dt>Indirizzo</dt>
-        <dd><a href="https://goo.gl/maps/PqR6f35xjyeknL2K6">Via Nuova Ponente 5/F</a></dd>
+        <dd>
+          <a href="https://goo.gl/maps/PqR6f35xjyeknL2K6">
+            Via Nuova Ponente 5/F
+          </a>
+        </dd>
         <dt>Telefono</dt>
-        <dd><a href="tel:059641442">059 641442</a></dd>
+        <dd>
+          <a href="tel:+39059641442">059 641442</a>
+        </dd>
+        <dt>WhatsApp</dt>
+        <dd>
+          <a href="https://wa.me/39059641442">059 641442</a>
+        </dd>
         <dt>Email</dt>
         <dd>
-          <a href="mailto:info@gelateriacaraibicarpi.it">info@gelateriacaraibicarpi.it</a>
+          <a href="mailto:info@gelateriacaraibicarpi.it">
+            info@gelateriacaraibicarpi.it
+          </a>
         </dd>
       </dl>
     </section>
     <p className="copyright">
-      Website by <a href="https://www.linkedin.com/in/nicologasparini/">Gasparini Nicolò</a>
+      Website by{' '}
+      <a href="https://www.linkedin.com/in/nicologasparini/">
+        Gasparini Nicolò
+      </a>
     </p>
 
     {/*<CookieConsent*/}
@@ -55,7 +83,6 @@ const Footer = props => (
     {/*  contentClasses="cookie-ctn">*/}
     {/*  Questo sito utilizza i cookie per migliorare l'esperienza dell'utente*/}
     {/*</CookieConsent>*/}
-
   </footer>
 )
 

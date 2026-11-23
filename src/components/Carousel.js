@@ -1,30 +1,33 @@
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import {Carousel} from "react-responsive-carousel"
-import slide1 from '../assets/images/slides/13.jpg'
-import slide2 from '../assets/images/slides/12.jpg'
-import slide3 from '../assets/images/slides/10.jpg'
-import slide4 from '../assets/images/slides/9.jpg'
-import slide5 from '../assets/images/slides/11.jpg'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
+import OptimizedImage from './OptimizedImage'
 
-const CustomCarousel = props => (
-  <Carousel infiniteLoop autoPlay showStatus={false} showThumbs={false} transitionTime={1200}>
-    <div>
-      <img src={slide1} alt=""/>
-      {/*<p className="legend">Legend 1</p>*/}
-    </div>
-    <div>
-      <img src={slide2} alt=""/>
-    </div>
-    <div>
-      <img src={slide3} alt=""/>
-    </div>
-    <div>
-      <img src={slide4} alt=""/>
-    </div>
-    <div>
-      <img src={slide5} alt=""/>
-    </div>
+const slides = ['13', '12', '10', '9', '11']
+const CustomCarousel = () => (
+  <Carousel
+    showStatus={false}
+    showThumbs={false}
+    autoPlay={false}
+    swipeable
+    emulateTouch
+    labels={{
+      leftArrow: 'Foto precedente',
+      rightArrow: 'Foto successiva',
+      item: 'Foto delle nostre creazioni',
+    }}
+  >
+    {slides.map((slide, index) => (
+      <div key={slide}>
+        <OptimizedImage
+          image={`slides/${slide}`}
+          alt={`Una delle creazioni artigianali della Gelateria Caraibi, foto ${index +
+            1}`}
+          sizes="(max-width: 736px) 88vw, 900px"
+          priority={index > 0 ? 'low' : undefined}
+        />
+      </div>
+    ))}
   </Carousel>
 )
 

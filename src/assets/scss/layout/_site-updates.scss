@@ -1,0 +1,34 @@
+/* Le dimensioni intrinseche delle immagini rimangono valide anche prima del caricamento. */
+img { max-width: 100%; height: auto; }
+#header picture { display: block; }
+#header #logo-img { width: auto; max-width: 100%; object-fit: contain; }
+#nav.site-nav { position: sticky; top: 0; width: 100%; max-width: 100%; z-index: 1000; }
+#nav.site-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25em; }
+#nav.site-nav ul li { margin: 0; }
+#nav.site-nav ul li a { padding: 0 0.75em; font-size: 0.95em; }
+#nav.site-nav + #main { padding-top: 0; }
+#main article, #main section, details { scroll-margin-top: 10rem; }
+.product-content { display: flow-root; margin-bottom: 2.5em; }
+.product-content picture { display: block; }
+.booking-actions { flex-wrap: wrap; gap: 0.75em; }
+.booking-actions li { padding-left: 0; }
+.faq-list details { border-top: 1px solid _palette(border); padding: 1em 0; }
+.faq-list summary { cursor: pointer; font-weight: bold; }
+.faq-list details p { margin: 1em 0 0; }
+.flavour-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 2em; }
+.skip-link { position: fixed; top: -10em; left: 1em; z-index: 2000; background: #fff; color: #333; padding: 0.75em; }
+.skip-link:focus { top: 0.5em; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #9b1423; outline-offset: 4px; }
+#main #presentation .carousel-slider { overflow: hidden; }
+@media screen and (max-width: 736px) {
+  #header #logo-img { width: 100%; height: auto; }
+  #nav.site-nav { padding: 0.5em; }
+  #nav.site-nav ul li a { padding: 0 0.55em; font-size: 0.85em; }
+  .booking-actions { display: flex; }
+  .booking-actions li, .booking-actions .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+.icb #icb-container .level { width: 100%; height: auto; }

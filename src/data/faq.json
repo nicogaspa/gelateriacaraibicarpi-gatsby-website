@@ -1,0 +1,57 @@
+[
+  {
+    "id": "prenotare",
+    "question": "Come posso prenotare?",
+    "answer": "Puoi chiamare il numero 059 641442, presentarti direttamente in gelateria o contattare lo stesso numero su WhatsApp. Concorda con noi la tua richiesta e il ritiro."
+  },
+  {
+    "id": "ritiro",
+    "question": "Dove si ritirano le prenotazioni? Effettuate consegne?",
+    "answer": "Tutte le prenotazioni prevedono il ritiro in gelateria, in via Nuova Ponente 5/F a Carpi. La vendita è esclusivamente locale; non effettuiamo consegne."
+  },
+  {
+    "id": "porzioni",
+    "question": "Per quante persone sono i semifreddi?",
+    "answer": "Le porzioni sono indicate accanto a ogni semifreddo nella pagina prodotti. Contattaci per scegliere la proposta e il formato più adatti alla tua occasione."
+  },
+  {
+    "id": "torte",
+    "question": "Realizzate torte gelato personalizzate anche per 50 o più persone?",
+    "answer": "Sì, realizziamo torte gelato personalizzate anche per 50 o più persone, con scritte e immagini. Contatta la gelateria per concordare porzioni, formato, personalizzazione e tempi di preparazione."
+  },
+  {
+    "id": "aziende",
+    "question": "Posso prenotare coni e coppette per la mia azienda?",
+    "answer": "Sì, offriamo alle aziende il servizio di prenotazione di coni e coppette. Contattaci per concordare quantità e preparazione. Il ritiro avviene sempre in gelateria a Carpi."
+  },
+  {
+    "id": "prezzi",
+    "question": "Dove posso conoscere i prezzi?",
+    "answer": "Per i prezzi contatta la gelateria al numero 059 641442, su WhatsApp allo stesso numero oppure passa direttamente in negozio."
+  },
+  {
+    "id": "anticipo",
+    "question": "Con quanto anticipo devo prenotare?",
+    "answer": "Contatta la gelateria per concordare i tempi di preparazione in base al prodotto, alle quantità e alla personalizzazione richiesta."
+  },
+  {
+    "id": "orari",
+    "question": "Quali sono gli orari e il giorno di chiusura?",
+    "answer": "Durante il periodo di apertura siamo aperti dalle 10:30 alle 13:00 e dalle 14:30 alle 21:00. Il giorno di chiusura ordinaria è il martedì."
+  },
+  {
+    "id": "festivita",
+    "question": "Sono previste aperture straordinarie durante le festività?",
+    "answer": "Sì, effettuiamo aperture straordinarie durante le festività. Contatta la gelateria per conoscere i giorni e gli orari delle aperture festive."
+  },
+  {
+    "id": "inverno",
+    "question": "Quando chiudete per la pausa invernale?",
+    "answer": "La chiusura invernale va da metà dicembre a metà febbraio. Contatta la gelateria per conoscere le date esatte di chiusura e riapertura e le eventuali aperture straordinarie."
+  },
+  {
+    "id": "ingredienti",
+    "question": "Quali ingredienti utilizzate? Come posso informarmi sugli allergeni?",
+    "answer": "Prepariamo le nostre creazioni artigianali con ingredienti genuini. Per conoscere gli ingredienti di un prodotto o in caso di allergie e intolleranze, chiedi informazioni alla gelateria prima di ordinare."
+  }
+]

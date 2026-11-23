@@ -1,24 +1,51 @@
 {
   "checked_on": "2026-11-20",
   "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/",
-  "product_count": 13,
+  "product_count": 12,
   "ready_for_submission": false,
-  "scope": "Bozze Google online, Meta prodotti e OpenAI discovery; non coprono checkout o inventario locale.",
+  "sales": {
+    "channel": "in_store_only",
+    "fulfillment": "pickup_only",
+    "online_checkout": false,
+    "shipping": false,
+    "location": "Via Nuova Ponente 5/F, Carpi",
+    "omitted_fields": [
+      "price",
+      "availability"
+    ],
+    "confirmed_by_user_on": "2026-11-20",
+    "booking_methods": [
+      "phone",
+      "in_person",
+      "whatsapp"
+    ],
+    "phone": "+39059641442",
+    "whatsapp_url": "https://wa.me/39059641442",
+    "pricing": "Per i prezzi contattare la gelateria",
+    "business_service": "Prenotazione di coni e coppette per aziende, sempre con ritiro in gelateria a Carpi"
+  },
+  "omitted_by_request": [
+    "price",
+    "availability"
+  ],
+  "scope": "Google prodotti locali (solo anagrafica), cataloghi incompleti Meta e OpenAI; nessun inventario o checkout.",
+  "platform_status": {
+    "google": "Campi anagrafici locali compilati; verificare identificativi e configurare il programma locale. Inventario separato non generato: richiede disponibilità e store_code.",
+    "meta": "Catalogo incompleto: prezzo e disponibilità sono obbligatori anche con vendita locale.",
+    "openai": "Catalogo incompleto: prezzo e disponibilità sono obbligatori. IT/EUR richiede conferma del supporto da OpenAI."
+  },
   "global_blockers": [
-    "Definire vendita online oppure solo prenotazione e ritiro; per Google offline valutare feed prodotti e inventario locale.",
-    "Pubblicare pagine per singolo prodotto con prezzo, unità di vendita e disponibilità coerenti.",
-    "Confermare le varianti della torta personalizzata e delle confezioni di pasticcini.",
-    "OpenAI: il percorso standard è USA; ottenere conferma di supporto a IT/EUR e completare onboarding merchant.",
-    "Confermare GTIN/MPN oppure la loro effettiva assenza; non usare ID interni come codici del produttore."
+    "Confermare GTIN/MPN oppure la loro effettiva assenza; gli ID interni non sono codici del produttore.",
+    "Google: configurare negozio e destinazioni locali in Merchant Center; il solo catalogo non abilita annunci o schede locali.",
+    "Google: senza disponibilità non viene prodotto il feed inventario richiesto per le superfici locali.",
+    "Meta e OpenAI: omissione intenzionale di campi obbligatori; non inviare come feed conformi.",
+    "Meta e OpenAI: mancano pagine dedicate ai singoli prodotti; per Meta mancano ulteriori immagini.",
+    "OpenAI: ottenere conferma IT/EUR e completare onboarding merchant."
   ],
   "products": [
     {
       "id": "caraibi-torta-personalizzata",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -27,6 +54,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -35,11 +63,7 @@
     },
     {
       "id": "caraibi-pasticcini",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -48,6 +72,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -56,11 +81,7 @@
     },
     {
       "id": "caraibi-cremino",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -69,6 +90,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -77,11 +99,7 @@
     },
     {
       "id": "caraibi-gianduia-stracciatella",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -90,6 +108,25 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
+        "price"
+      ],
+      "image_at_least_500x500": true,
+      "image_within_meta_size_limit": true,
+      "offer_unit_confirmed": false
+    },
+    {
+      "id": "caraibi-pistacchio-nocciola",
+      "google_local_product_missing": [],
+      "meta_missing": [
+        "availability",
+        "price",
+        "link",
+        "additional_image_link"
+      ],
+      "openai_missing": [
+        "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -98,11 +135,7 @@
     },
     {
       "id": "caraibi-mascarpone",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -111,6 +144,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -119,11 +153,7 @@
     },
     {
       "id": "caraibi-cookies",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -132,27 +162,7 @@
       ],
       "openai_missing": [
         "url",
-        "price"
-      ],
-      "image_at_least_500x500": true,
-      "image_within_meta_size_limit": true,
-      "offer_unit_confirmed": false
-    },
-    {
-      "id": "caraibi-pino",
-      "google_missing": [
-        "link",
         "availability",
-        "price"
-      ],
-      "meta_missing": [
-        "availability",
-        "price",
-        "link",
-        "additional_image_link"
-      ],
-      "openai_missing": [
-        "url",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -161,11 +171,7 @@
     },
     {
       "id": "caraibi-torta-catalana",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -174,27 +180,7 @@
       ],
       "openai_missing": [
         "url",
-        "price"
-      ],
-      "image_at_least_500x500": true,
-      "image_within_meta_size_limit": true,
-      "offer_unit_confirmed": false
-    },
-    {
-      "id": "caraibi-rocher",
-      "google_missing": [
-        "link",
         "availability",
-        "price"
-      ],
-      "meta_missing": [
-        "availability",
-        "price",
-        "link",
-        "additional_image_link"
-      ],
-      "openai_missing": [
-        "url",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -203,11 +189,7 @@
     },
     {
       "id": "caraibi-profitterol",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -216,6 +198,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -224,11 +207,7 @@
     },
     {
       "id": "caraibi-cheesecake",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -237,6 +216,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -245,11 +225,7 @@
     },
     {
       "id": "caraibi-zuppa-inglese",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -258,6 +234,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
@@ -266,11 +243,7 @@
     },
     {
       "id": "caraibi-stracchino-duchessa",
-      "google_missing": [
-        "link",
-        "availability",
-        "price"
-      ],
+      "google_local_product_missing": [],
       "meta_missing": [
         "availability",
         "price",
@@ -279,6 +252,7 @@
       ],
       "openai_missing": [
         "url",
+        "availability",
         "price"
       ],
       "image_at_least_500x500": true,
