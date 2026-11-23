@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gelateria-caraibi-carpi",
+  "version": "0.1.2",
+  "description": "Informazioni su gusti, prodotti, sede, orari e servizi della Gelateria Caraibi di Carpi, tratte dai contenuti del sito.",
+  "homepage": "https://www.gelateriacaraibicarpi.it",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Gelateria Caraibi Carpi",
+        "shortDescription": "Gusti, prodotti e informazioni",
+        "longDescription": "Scopri i gusti di gelato, i semifreddi con le rispettive porzioni, le torte personalizzate, i servizi per aziende e le informazioni per visitare o contattare la Gelateria Caraibi di Carpi. Il plugin contiene una copia dei contenuti della repository: disponibilità del giorno, prezzi, ingredienti e aperture straordinarie vanno confermati con la gelateria. Non gestisce ordini o prenotazioni.",
+        "category": "Other",
+        "capabilities": [],
+        "defaultPrompt": [
+          "Quali gusti di gelato propone la Gelateria Caraibi Carpi?",
+          "Quali semifreddi ci sono e per quante persone?",
+          "Dove si trova la gelateria e come posso prenotare una torta personalizzata?"
+        ],
+        "websiteURL": "https://www.gelateriacaraibicarpi.it/",
+        "supportURL": "https://www.gelateriacaraibicarpi.it/chatgpt-plugin/supporto/",
+        "logo": "./assets/caraibi-icon.png",
+        "composerIcon": "./assets/caraibi-icon.png",
+        "developerName": "Nicolò Gasparini",
+        "privacyPolicyURL": "https://www.gelateriacaraibicarpi.it/chatgpt-plugin/privacy/",
+        "termsOfServiceURL": "https://www.gelateriacaraibicarpi.it/chatgpt-plugin/termini/"
+      }
+    }
+  },
+  "author": {
+    "name": "Nicolò Gasparini",
+    "email": "nicologasparini94@gmail.com"
+  }
+}

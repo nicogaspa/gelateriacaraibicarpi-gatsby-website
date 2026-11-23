@@ -34,7 +34,14 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/`,
-        excludes: ['/404/', '/404.html', '/offline-plugin-app-shell-fallback/']
+        excludes: [
+          '/404/',
+          '/404.html',
+          '/offline-plugin-app-shell-fallback/',
+          '/chatgpt-plugin/supporto/',
+          '/chatgpt-plugin/privacy/',
+          '/chatgpt-plugin/termini/',
+        ]
       }
     },
     {

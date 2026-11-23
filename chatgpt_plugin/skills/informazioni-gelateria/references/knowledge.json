@@ -1,0 +1,407 @@
+{
+  "extracted_on": "2026-11-23",
+  "freshness_notice": "Copia dei contenuti in repository; non verifica disponibilità o apertura in tempo reale.",
+  "source_files": {
+    "business": [
+      "src/data/business.json",
+      "src/components/Footer.js",
+      "src/components/BusinessSchema.js",
+      "feeds/catalog.json"
+    ],
+    "about": [
+      "src/pages/index.js"
+    ],
+    "flavours": [
+      "src/data/flavours.json",
+      "src/pages/gusti.js"
+    ],
+    "products": [
+      "feeds/catalog.json"
+    ],
+    "services": [
+      "src/pages/torte-gelato-carpi.js",
+      "src/data/faq.json"
+    ],
+    "faq": [
+      "src/data/faq.json"
+    ],
+    "editorial_rules": [
+      "AGENTS.md"
+    ]
+  },
+  "source_pages": {
+    "homepage": "https://www.gelateriacaraibicarpi.it/",
+    "flavours": "https://www.gelateriacaraibicarpi.it/gusti/",
+    "products": "https://www.gelateriacaraibicarpi.it/prodotti/",
+    "custom_cakes": "https://www.gelateriacaraibicarpi.it/torte-gelato-carpi/",
+    "faq": "https://www.gelateriacaraibicarpi.it/faq/",
+    "flavour_generator": "https://www.gelateriacaraibicarpi.it/creagelato/"
+  },
+  "business": {
+    "name": "Gelateria Caraibi",
+    "siteUrl": "https://www.gelateriacaraibicarpi.it",
+    "phone": "+39059641442",
+    "phoneDisplay": "059 641442",
+    "phoneUrl": "tel:+39059641442",
+    "whatsappUrl": "https://wa.me/39059641442",
+    "mapsUrl": "https://goo.gl/maps/PqR6f35xjyeknL2K6",
+    "hours": "dalle 10:30 alle 13:00 e dalle 14:30 alle 21:00",
+    "seasonalNotice": "Chiuso il martedì; aperture straordinarie durante le festività. Chiusura invernale da metà dicembre a metà febbraio.",
+    "address": "Via Nuova Ponente 5/F, Carpi",
+    "region": "MO",
+    "country": "IT",
+    "email": "info@gelateriacaraibicarpi.it",
+    "facebookUrl": "https://www.facebook.com/GelateriaCaraibiCarpi/",
+    "instagramUrl": "https://www.instagram.com/gelateriacaraibicarpi/",
+    "owners": "Gasparini Massimo e Pivetti Marzia"
+  },
+  "about": {
+    "description": "Gelateria artigianale a Carpi dal 1987, con ingredienti genuini.",
+    "other_offerings": [
+      "Frappè",
+      "Semifreddi e torte",
+      "Gelato",
+      "Granite",
+      "Cioccolate calde con panna"
+    ]
+  },
+  "flavour_groups": [
+    {
+      "title": "Gusti Classici",
+      "ids": [
+        1,
+        2,
+        10,
+        12,
+        11,
+        13,
+        14,
+        20,
+        19,
+        22,
+        21,
+        24
+      ]
+    },
+    {
+      "title": "Gusti di Frutta",
+      "ids": [
+        4,
+        5,
+        8,
+        7,
+        6,
+        15,
+        17,
+        18
+      ]
+    },
+    {
+      "title": "Gusti Speciali",
+      "ids": [
+        3,
+        9,
+        16,
+        23,
+        25,
+        26
+      ]
+    }
+  ],
+  "flavours": [
+    {
+      "id": 1,
+      "title": "Menta",
+      "desc": "Fresco sapore con gocce di cioccolato"
+    },
+    {
+      "id": 2,
+      "title": "Pistacchio",
+      "desc": "Verde delizia"
+    },
+    {
+      "id": 3,
+      "title": "Cookies Biscotto",
+      "desc": "La dolcezza del biscotto fatta gelato"
+    },
+    {
+      "id": 4,
+      "title": "Frutti di Bosco",
+      "desc": "Fragoline, More e Lamponi"
+    },
+    {
+      "id": 5,
+      "title": "Fragola",
+      "desc": "Il dolce e classico gusto di frutta"
+    },
+    {
+      "id": 6,
+      "title": "Banana",
+      "desc": "Provala con il cioccolato"
+    },
+    {
+      "id": 7,
+      "title": "Pesca",
+      "desc": "Un nettare fruttato"
+    },
+    {
+      "id": 8,
+      "title": "Melone",
+      "desc": "Freschezza estiva!"
+    },
+    {
+      "id": 9,
+      "title": "Crema Catalana",
+      "desc": "una crema caramellata con dolci frutti di bosco"
+    },
+    {
+      "id": 10,
+      "title": "Crema",
+      "desc": "Il classico vanigliato"
+    },
+    {
+      "id": 11,
+      "title": "Fiordilatte",
+      "desc": "Perfetto per qualsiasi abbinamento"
+    },
+    {
+      "id": 12,
+      "title": "Stracciatella",
+      "desc": "Senti che crok questi pezzi di cioccolata!"
+    },
+    {
+      "id": 13,
+      "title": "Yogurt",
+      "desc": "Lasciati catturare dal sapore"
+    },
+    {
+      "id": 14,
+      "title": "Yogurt ai Frutti di bosco",
+      "desc": "Tutto il sapore dello yogurt con un gusto in più"
+    },
+    {
+      "id": 15,
+      "title": "Amarena",
+      "desc": "Solo amarene Fabbri"
+    },
+    {
+      "id": 16,
+      "title": "Kinder biscotto",
+      "desc": "Il migliore! Dolce cioccolato bianco variegato"
+    },
+    {
+      "id": 17,
+      "title": "Cocco",
+      "desc": "Cocco bello!!!"
+    },
+    {
+      "id": 18,
+      "title": "Limone",
+      "desc": "Una certezza quando si parla di frutta"
+    },
+    {
+      "id": 19,
+      "title": "Bacio",
+      "desc": "Gianduia con una croccante sorpresa di nocciole intere"
+    },
+    {
+      "id": 20,
+      "title": "Nutella",
+      "desc": "Serve dire altro?"
+    },
+    {
+      "id": 21,
+      "title": "Caffè",
+      "desc": "Per un po' di carica in più!"
+    },
+    {
+      "id": 22,
+      "title": "Cioccolato",
+      "desc": "Il preferito di tutti, da sempre"
+    },
+    {
+      "id": 23,
+      "title": "Cioccolato Fondente",
+      "desc": "Quando il cioccolato normale non è abbastanza"
+    },
+    {
+      "id": 24,
+      "title": "Nocciola",
+      "desc": "Si scioglie in bocca, buonissimo!"
+    },
+    {
+      "id": 25,
+      "title": "Croccantino",
+      "desc": "Lasciati cullare dalla tradizione"
+    },
+    {
+      "id": 26,
+      "title": "Mascarpone e Nutella",
+      "desc": "Te lo meriti"
+    }
+  ],
+  "products": [
+    {
+      "id": "caraibi-torta-personalizzata",
+      "title": "La tua torta!",
+      "subtitle": "Torte personalizzate anche per 50 o più persone",
+      "description": "Da noi puoi ordinare la tua torta gelato personalizzata, con le scritte e immagini che vuoi tu, per rendere ancora più speciale ogni occasione! Realizziamo torte su misura anche per 50 o più persone. Per formati, porzioni e prezzi contatta la gelateria. Consigliamo di mantenerle in freezer fino a 20 minuti prima della consumazione.",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-pasticcini",
+      "title": "Pasticcini di Gelato",
+      "subtitle": "8/10 porzioni",
+      "description": "I più versatili, comodi e buoni dessert che ci possano essere! Provali nella scatola da 24 o 32 pezzi, sono tutti diversi e hanno un solo difetto...uno tira l'altro e finiscono subito! Consigliamo di mantenerli in freezer e mangiarli al momento",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-cremino",
+      "title": "Vaniglia e Cioccolata",
+      "subtitle": "6 porzioni",
+      "description": "Il topping croccante sembra la parte più buona, ma aspettate di assaggiare l'interno di vaniglia e cioccolata... Consigliamo di mantenerlo in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-gianduia-stracciatella",
+      "title": "Gianduia e Stracciatella",
+      "subtitle": "6 porzioni",
+      "description": "Un classico intramontabile, una base di semifreddo, metà gianduia e metà stracciatella, coperto da una crema di cioccolato fondente e piccole meringhe Consigliamo di mantenerlo in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-pistacchio-nocciola",
+      "title": "Pistacchio Nocciola",
+      "subtitle": "6 porzioni",
+      "description": "Un cuore di nocciola e pistacchio, con granella di pistacchio e decorazioni di cioccolato. Consigliamo di mantenerla in freezer fino a 20 minuti prima della consumazione.",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-mascarpone",
+      "title": "Mascarpone",
+      "subtitle": "6 porzioni",
+      "description": "Un dolce cremoso ricopre un cuore di biscotti al caffè, con una spolverata di cacao. Riscopri la classicità con questo dolce familiare Consigliamo di mantenerlo in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-cookies",
+      "title": "Torta Cookies",
+      "subtitle": "8 porzioni",
+      "description": "Gianduia e Zabaione ricoperti da una cremosa crema alle nocciole e cacao, con questa non si sbaglia! Consigliamo di mantenerla in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-torta-catalana",
+      "title": "Catalana di Bosco",
+      "subtitle": "6 porzioni",
+      "description": "Pan di spagna, una crema di vaniglia variegata ai frutti bosco e una fila di amarene rendono unico questo dolce Consigliamo di mantenerla in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-profitterol",
+      "title": "Profitterol",
+      "subtitle": "7 porzioni",
+      "description": "Non servono introduzioni per il re dei dessert, un paio di bignè a testa e tutti si leccheranno i baffi! Consigliamo di mantenerlo in freezer fino a 40 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-cheesecake",
+      "title": "Cheesecake",
+      "subtitle": "6 porzioni",
+      "description": "Una classica cheesecake rivisitata a semifreddo, con una dolce base di biscotti e una copertura di fragoline o frutti di bosco Consigliamo di mantenerla in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-zuppa-inglese",
+      "title": "Zuppa Inglese",
+      "subtitle": "3 porzioni",
+      "description": "Un classico dessert rivisitato al croccantino, avvolto da savoiardi all'alchermes Consigliamo di mantenerl1 in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    },
+    {
+      "id": "caraibi-stracchino-duchessa",
+      "title": "Stracchino della duchessa",
+      "subtitle": "3 porzioni",
+      "description": "Croccanti amaretti e goccie di cioccolato per il più delicato dei semifreddi Consigliamo di mantenerlo in freezer fino a 20 minuti prima della consumazione",
+      "source_url": "https://www.gelateriacaraibicarpi.it/prodotti/"
+    }
+  ],
+  "services": {
+    "custom_cakes": "Torte gelato personalizzate con scritte e immagini, anche per 50 o più persone. Concordare porzioni, formato, personalizzazione e tempi di preparazione con la gelateria.",
+    "business_bookings": "Prenotazione di coni e coppette per aziende, sempre con ritiro in gelateria a Carpi",
+    "flavour_generator": "Il sito propone abbinamenti casuali di tre gusti diversi con Crea il tuo gelato; è uno strumento di ispirazione, non di ordine."
+  },
+  "sales": {
+    "channel": "in_store_only",
+    "fulfillment": "pickup_only",
+    "online_checkout": false,
+    "shipping": false,
+    "location": "Via Nuova Ponente 5/F, Carpi",
+    "booking_methods": [
+      "phone",
+      "in_person",
+      "whatsapp"
+    ],
+    "phone": "+39059641442",
+    "whatsapp_url": "https://wa.me/39059641442",
+    "pricing": "Per i prezzi contattare la gelateria",
+    "business_service": "Prenotazione di coni e coppette per aziende, sempre con ritiro in gelateria a Carpi"
+  },
+  "faq": [
+    {
+      "id": "prenotare",
+      "question": "Come posso prenotare?",
+      "answer": "Puoi chiamare il numero 059 641442, presentarti direttamente in gelateria o contattare lo stesso numero su WhatsApp. Concorda con noi la tua richiesta e il ritiro."
+    },
+    {
+      "id": "ritiro",
+      "question": "Dove si ritirano le prenotazioni? Effettuate consegne?",
+      "answer": "Tutte le prenotazioni prevedono il ritiro in gelateria, in via Nuova Ponente 5/F a Carpi. La vendita è esclusivamente locale; non effettuiamo consegne."
+    },
+    {
+      "id": "porzioni",
+      "question": "Per quante persone sono i semifreddi?",
+      "answer": "Le porzioni sono indicate accanto a ogni semifreddo nella pagina prodotti. Contattaci per scegliere la proposta e il formato più adatti alla tua occasione."
+    },
+    {
+      "id": "torte",
+      "question": "Realizzate torte gelato personalizzate anche per 50 o più persone?",
+      "answer": "Sì, realizziamo torte gelato personalizzate anche per 50 o più persone, con scritte e immagini. Contatta la gelateria per concordare porzioni, formato, personalizzazione e tempi di preparazione."
+    },
+    {
+      "id": "aziende",
+      "question": "Posso prenotare coni e coppette per la mia azienda?",
+      "answer": "Sì, offriamo alle aziende il servizio di prenotazione di coni e coppette. Contattaci per concordare quantità e preparazione. Il ritiro avviene sempre in gelateria a Carpi."
+    },
+    {
+      "id": "prezzi",
+      "question": "Dove posso conoscere i prezzi?",
+      "answer": "Per i prezzi contatta la gelateria al numero 059 641442, su WhatsApp allo stesso numero oppure passa direttamente in negozio."
+    },
+    {
+      "id": "anticipo",
+      "question": "Con quanto anticipo devo prenotare?",
+      "answer": "Contatta la gelateria per concordare i tempi di preparazione in base al prodotto, alle quantità e alla personalizzazione richiesta."
+    },
+    {
+      "id": "orari",
+      "question": "Quali sono gli orari e il giorno di chiusura?",
+      "answer": "Durante il periodo di apertura siamo aperti dalle 10:30 alle 13:00 e dalle 14:30 alle 21:00. Il giorno di chiusura ordinaria è il martedì."
+    },
+    {
+      "id": "festivita",
+      "question": "Sono previste aperture straordinarie durante le festività?",
+      "answer": "Sì, effettuiamo aperture straordinarie durante le festività. Contatta la gelateria per conoscere i giorni e gli orari delle aperture festive."
+    },
+    {
+      "id": "inverno",
+      "question": "Quando chiudete per la pausa invernale?",
+      "answer": "La chiusura invernale va da metà dicembre a metà febbraio. Contatta la gelateria per conoscere le date esatte di chiusura e riapertura e le eventuali aperture straordinarie."
+    },
+    {
+      "id": "ingredienti",
+      "question": "Quali ingredienti utilizzate? Come posso informarmi sugli allergeni?",
+      "answer": "Prepariamo le nostre creazioni artigianali con ingredienti genuini. Per conoscere gli ingredienti di un prodotto o in caso di allergie e intolleranze, chiedi informazioni alla gelateria prima di ordinare."
+    }
+  ]
+}
